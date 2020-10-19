@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="box-p">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <input type="button" value="edit" id="edit-btn">
+        <input type="button" value="style" id="style-btn">
+
+        <div class="editBox">
+
+            <div class="box-textarea">
+                <textarea id="editTA" cols="110" rows="10"></textarea>
+                <input type="button" value="add" id="add">
+                <input type="button" value="save" id="save">
+            </div>
+
+            <div class="box-style">
+
+                <form name="styles">
+                    <p>Font Size</p>
+                    <input onclick="fontSize()" type="radio" name="size" value="12px">12px
+                    <input onclick="fontSize()" type="radio" name="size" value="14px">14px
+                    <input onclick="fontSize()" type="radio" name="size" value="16px" checked>16px
+                    <input onclick="fontSize()" type="radio" name="size" value="18px">18px
+                    <input onclick="fontSize()" type="radio" name="size" value="20px">20px
+
+                    <p>Font Family</p>
+                    <select>
+                        <option value="">Choose option</option>
+                        <option value="cursive">cursive</option>
+                        <option value="fantasy">fantasy</option>
+                        <option value="monospace">monospace</option>
+                        <option value="sans-serif">sans-serif</option>
+                    </select>
+
+                    <p>Colors</p>
+                    <input type="button" value="Color of Text" id="textBtn">
+                    <input type="button" value="Background color " id="backBtn">
+
+                    <div class="containerColors">
+                        <div class="color smallBox1" style="background-color: red;"></div>
+                        <div class="color smallBox2" style="background-color: blue;"></div>
+                        <div class="color smallBox3" style="background-color: green;"></div>
+                        <div class="color smallBox4" style="background-color: black;"></div>
+                        <div class="color smallBox5" style="background-color: yellow;"></div>
+                        <div class="color smallBox6" style="background-color: fuchsia;"></div>
+                        <div class="color smallBox7" style="background-color: white;"></div>
+                        <div class="color smallBox8" style="background-color: purple;"></div>
+                        <div class="color smallBox9" style="background-color: teal;"></div>
+                    </div>
+
+                    <div class="containerBackgrounds">
+                        <div class="background small1" style="background-color: red;"></div>
+                        <div class="background small2" style="background-color: blue;"></div>
+                        <div class="background small3" style="background-color: green;"></div>
+                        <div class="background small4" style="background-color: black;"></div>
+                        <div class="background small5" style="background-color: yellow;"></div>
+                        <div class="background small6" style="background-color: fuchsia;"></div>
+                        <div class="background small7" style="background-color: white;"></div>
+                        <div class="background small8" style="background-color: purple;"></div>
+                        <div class="background small9" style="background-color: teal;"></div>
+                    </div>
+
+                    <p>Style</p>
+                    <input type="checkbox" id="t1" value="bold" >Bold Text
+                    <input type="checkbox" id="t2" value="cursive">Cursive Text
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="create" style="display: none;">
+
+        <form name="title">
+            <h2>Choose what you want:</h2>
+            <input type="radio" name="choose" id="table">table
+            <input type="radio" name="choose" id="list">list
+        </form>
+
+        <div class="formTable" style="display: none;">
+
+            <form name="createTable">
+                <div class="inputs">
+                    <label for="tr-inp">Count TR:</label>
+                    <input type="text" id="tr-inp" placeholder="Count TR">
+                </div>
+
+                <div class="inputs">
+                    <label for="td-inp">Count TD:</label>
+                    <input type="text" id="td-inp" placeholder="Count TD">
+                </div>
+
+                <h3>Add style to your table</h3>
+
+                <div class="inputs">
+                    <label for="widthTR">Width of TR:</label>
+                    <input type="text" id="widthTR" placeholder="Width of TR">
+                </div>
+
+                <div class="inputs">
+                    <label for="widthTD">Height of TD:</label>
+                    <input type="text" id="widthTD" placeholder="Height of TD">
+                </div>
+
+                <div class="inputs">
+                    <label for="widthBrd">Width of border:</label>
+                    <input type="text" id="widthBrd" placeholder="Width">
+
+                    <label for="typeBorder">Type of border:</label>
+                    <select id="typeBorder">
+                        <option value="solid">solid</option>
+                        <option value="dotted">dotted</option>
+                        <option value="dashed">dashed</option>
+                        <option value="double ">double</option>
+                        <option value="groove">groove</option>
+                        <option value="ridge ">ridge</option>
+                    </select>
+
+                    <label for="colBorder">Color of border:</label>
+                    <select id="colBorder">
+                        <option value="black">black</option>
+                        <option value="red">red</option>
+                        <option value="green">green</option>
+                        <option value="blue ">blue</option>
+                        <option value="gray">gray</option>
+                        <option value="white ">white</option>
+                    </select>
+                </div>
+
+                <input type="button" value="Create table" id="tableBtn">
+            </form>
+        </div>
+
+        <div class="wrapList" style="display: none;">
+            <form name="createList">
+
+                <div class="inputs">
+                    <label for="countLI">Count LI:</label>
+                    <input type="text" id="countLI" placeholder="Count LI">
+                </div>
+
+                <div class="inputs">
+                    <label for="marks">Type of marks:</label>
+                    <select id="marks">
+                        <option value="circle" selected>circle</option>
+                        <option value="square">square</option>
+                        <option value="disc">disc</option>
+                    </select>
+                </div>
+
+                <input type="button" value="Create list" id="listBtn">
+
+            </form>
+        </div>
+
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
